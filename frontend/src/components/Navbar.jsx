@@ -6,7 +6,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="bg-gradient-to-r from-cyan-600 to-blue-700 p-2 rounded-xl shadow-md">
+            <div className="bg-linear-to-r from-cyan-600 to-blue-700 p-2 rounded-xl shadow-md">
               <i className="fas fa-tint text-white text-xl"></i>
             </div>
             <div>
@@ -18,7 +18,6 @@ const Navbar = () => {
           </div>
           <div className="flex items-center gap-2 text-sm">
             <i className="fas fa-microchip text-cyan-500"></i>
-            <span className="text-gray-600 hidden sm:inline">AI-Powered Prediction</span>
           </div>
         </div>
       </div>

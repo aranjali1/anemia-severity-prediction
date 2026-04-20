@@ -33,7 +33,7 @@ const ResultDashboard = ({ result, loading, form }) => {
   if (!result && !loading) {
     return (
       <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden sticky top-24">
-        <div className="bg-gradient-to-r from-gray-50 to-white px-6 py-4 border-b border-gray-100">
+        <div className="bg-linear-to-r from-gray-50 to-white px-6 py-4 border-b border-gray-100">
           <div className="flex items-center gap-2">
             <i className="fas fa-chart-pie text-cyan-600 text-lg"></i>
             <h2 className="text-lg font-semibold text-gray-800">Prediction Results</h2>
@@ -93,20 +93,12 @@ const ResultDashboard = ({ result, loading, form }) => {
         {/* XGBoost Result - Severity Score & Condition */}
         <div className={`rounded-xl border-2 p-4 ${getConditionBgColor(result.condition)}`}>
           <div className="flex items-center gap-2 mb-3">
-            <div className="bg-gradient-to-r from-blue-500 to-cyan-500 p-1.5 rounded-lg">
+            <div className="bg-linear-to-r from-blue-500 to-cyan-500 p-1.5 rounded-lg">
               <i className="fas fa-chart-line text-white text-xs"></i>
             </div>
             <h3 className="text-lg font-semibold text-gray-700">Severity Score</h3>
           </div>
           
-          {/* Condition from API */}
-          <div className="text-center mb-4">
-            <i className={`fas ${getConditionIcon(result.condition)} text-3xl mb-2 ${getConditionColor(result.condition)}`}></i>
-            <p className="text-xs text-gray-500 uppercase tracking-wide">Diagnosis</p>
-            <p className={`text-2xl font-bold mt-1 ${getConditionColor(result.condition)}`}>
-              {result.condition}
-            </p>
-          </div>
           
           {/* Severity Score from API */}
           <div>
@@ -127,9 +119,9 @@ const ResultDashboard = ({ result, loading, form }) => {
         </div>
 
         {/* KMeans Result - Secondary Validation */}
-        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100">
+        <div className="bg-linear-to-r from-purple-50 to-pink-50 rounded-xl p-4 border border-purple-100">
           <div className="flex items-center gap-2 mb-3">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-1.5 rounded-lg">
+            <div className="bg-linear-to-r from-purple-500 to-pink-500 p-1.5 rounded-lg">
               <i className="fas fa-chart-simple text-white text-xs"></i>
             </div>
             <h3 className="text-sm font-semibold text-gray-700">KMeans Clustering</h3>

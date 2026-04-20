@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import InputForm from "./components/InputForm";
 import ResultDashboard from "./components/ResultDashboard";
 import Footer from "./components/Footer";
+import HeroSection from "./components/HeroSection";
 
 function App() {
   const [form, setForm] = useState({
@@ -74,7 +75,6 @@ function App() {
       const combinedResult = {
         // XGBoost results (severity score AND condition)
         severity_score: xgbData.severity_score,
-        condition: xgbData.condition,  // This comes from /predict-xgb
         xgb_model: xgbData.model,
         
         // KMeans results
@@ -103,7 +103,9 @@ function App() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Navbar />
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <HeroSection />
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-6">
             <InputForm
